@@ -2,7 +2,14 @@ version: '3'
 
 services:
   db:
-    image: mysql
+    image: postgres
+    environment:
+      POSTGRES_DB: 'local_projectosaurus'
+      POSTGRES_USER: 'rex'
+      POSTGRES_PASSWORD: 'dinosaur'
+    volumes:
+      - ./seed_files:/docker-entrypoint-initdb.d/
+      - ./tmp/db:/var/lib/postgresql/data
   web:
     build: .
     command: python3 manage.py runserver 0.0.0.0:8000
