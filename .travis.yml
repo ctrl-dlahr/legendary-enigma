@@ -16,4 +16,4 @@ after_success: coverage report
 branches:
   only:
     - master
-services: postgresql
+services: mysql
