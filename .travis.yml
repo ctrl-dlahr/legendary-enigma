@@ -11,7 +11,6 @@ install:
   - pip install -q Django==$DJANGO_VERSION
   - pip install -r requirements.txt
   - pip install coverage
-  - python setup.py -q install
 script: coverage run manage.py test
 after_success: coverage report
 branches:
