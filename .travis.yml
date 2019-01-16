@@ -1,17 +1,11 @@
 language: python
-# current work around for python 3.7
-matrix:
-  include:
-    - python: 3.7
-      dist: xenial
-      sudo: true
-env:
-  - DJANGO_VERSION=2.1.5 DB=postgres
-install:
-  - pip install -q Django==$DJANGO_VERSION
-  - pip install -r requirements.txt
-script: python3 manage.py test
+
+sudo: required
+
 branches:
   only:
     - master
-services: postgresql
+
+services: docker
+
+script: python3 manage.py test
