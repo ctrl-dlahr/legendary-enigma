@@ -6,7 +6,7 @@ matrix:
       dist: xenial
       sudo: true
 env:
-  - DJANGO_VERSION=2.1.5
+  - DJANGO_VERSION=2.1.5 DB=postgres
 before_install:
   - psql -c "CREATE DATABASE db;" -U postgres
 install:
@@ -16,4 +16,4 @@ script: python3 manage.py test
 branches:
   only:
     - master
-services: postgresql
+# services: postgresql
