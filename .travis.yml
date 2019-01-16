@@ -5,8 +5,6 @@ matrix:
     - python: 3.7
       dist: xenial
       sudo: true
-virtualenv:
-  system_site_packages: true
 env:
   - DJANGO_VERSION=2.1.5
 install:
