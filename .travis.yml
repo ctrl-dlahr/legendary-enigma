@@ -1,11 +1,13 @@
 language: python
-
-sudo: required
+matrix:
+  include:
+    - python: 3.7
+      dist: xenial
+      sudo: true
 
 branches:
   only:
     - master
 
 services: docker
-
-script: python3 manage.py test
+script: docker-compose run web python manage.py test
