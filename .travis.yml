@@ -7,7 +7,7 @@ matrix:
       sudo: true
 env:
   - DJANGO_VERSION=2.1.5 DB=postgres
-before_install:
+before_script:
   - psql -c "CREATE DATABASE db;" -U postgres
 install:
   - pip install -q Django==$DJANGO_VERSION
