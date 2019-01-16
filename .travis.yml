@@ -10,9 +10,7 @@ env:
 install:
   - pip install -q Django==$DJANGO_VERSION
   - pip install -r requirements.txt
-  - pip install coverage
-script: coverage run manage.py test
-after_success: coverage report
+script: python manage.py test
 branches:
   only:
     - master

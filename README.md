@@ -22,3 +22,9 @@ docker-compose stop
 ```
 docker-compose down
 ```
+
+## Run tests
+Make sure you run `docker-compose up` before running tests
+```
+docker-compose run web python manage.py test
+```
