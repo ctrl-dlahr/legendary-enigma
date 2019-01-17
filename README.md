@@ -28,3 +28,8 @@ Make sure you run `docker-compose up` before running tests
 ```
 docker-compose run web python manage.py test
 ```
+
+## Run migrations
+```
+docker-compose run web python3 manage.py migrate
+```
