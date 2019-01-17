@@ -31,5 +31,5 @@ docker-compose run web python manage.py test
 
 ## Run migrations
 ```
-docker-compose run web python3 manage.py migrate
+docker-compose run web python manage.py migrate
 ```
